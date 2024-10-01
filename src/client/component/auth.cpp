@@ -18,7 +18,6 @@
 #include <utils/info_string.hpp>
 #include <utils/cryptography.hpp>
 #include <utils/http.hpp>
-#include <utils/obfus.hpp>
 
 namespace auth
 {
@@ -153,7 +152,7 @@ namespace auth
 			proto::network::connect_info info;
 			if (msg->cursize < offset || !info.ParseFromArray(msg->data + offset, msg->cursize - offset))
 			{
-				CALL(&network::send, *from, "error", "Invalid connect data!", '\n');
+				&network::send, *from, "error", "Invalid connect data!", '\n';
 				return;
 			}
 
@@ -163,7 +162,7 @@ namespace auth
 			const command::params_sv params;
 			if (params.size() < 3)
 			{
-				CALL(&network::send, *from, "error", "Invalid connect string!", '\n');
+				&network::send, *from, "error", "Invalid connect string!", '\n';
 				return;
 			}
 
@@ -174,7 +173,7 @@ namespace auth
 
 			if (steam_id.empty() || challenge.empty())
 			{
-				CALL(&network::send, *from, "error", "Invalid connect data!", '\n');
+				&network::send, *from, "error", "Invalid connect data!", '\n';
 				return;
 			}
 
@@ -185,14 +184,14 @@ namespace auth
 
 			if (xuid != key.get_hash())
 			{
-				CALL(&network::send, *from, "error",
-					utils::string::va("XUID doesn't match the certificate: %llX != %llX", xuid, key.get_hash()), '\n');
+				&network::send, *from, "error",
+					utils::string::va("XUID doesn't match the certificate: %llX != %llX", xuid, key.get_hash()), '\n';
 				return;
 			}
 
 			if (!key.is_valid() || !verify_message(key, challenge, info.signature()))
 			{
-				CALL(&network::send, *from, "error", "Challenge signature was invalid!", '\n');
+				&network::send, *from, "error", "Challenge signature was invalid!", '\n';
 				return;
 			}
 
@@ -211,8 +210,8 @@ namespace auth
 				game::StringTable* horizongamertags_pc{};
 
 				// had to add ours here cuz we cant repack the original one
-				game::StringTable_GetAsset(OBF("mp/activisiongamertags_pc.csv"), &gamertags_pc);
-				game::StringTable_GetAsset(OBF("mp/horizongamertags_pc.csv"), &horizongamertags_pc);
+				game::StringTable_GetAsset("mp/activisiongamertags_pc.csv", &gamertags_pc);
+				game::StringTable_GetAsset("mp/horizongamertags_pc.csv", &horizongamertags_pc);
 
 				for (auto& tag_s : clantags::tags)
 				{
@@ -223,7 +222,7 @@ namespace auth
 						if ((!gamertags_pc || !gamertags_pc->rowCount) &&
 							(!horizongamertags_pc || !horizongamertags_pc->rowCount))
 						{
-							CALL(&network::send, *from, OBF("error"), OBF("Failed to authenticate tag"), '\n');
+							&network::send, *from, "error", "Failed to authenticate tag", '\n';
 							return;
 						}
 
@@ -293,7 +292,7 @@ namespace auth
 							}
 						}
 
-						CALL(&network::send, *from, OBF("error"), OBF("Invalid clantag"), '\n');
+						&network::send, *from, "error", "Invalid clantag", '\n';
 						return;
 					}
 				}
