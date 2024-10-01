@@ -12,6 +12,15 @@
 
 NOTE: You must legally own Call of Duty®: Modern Warfare Remastered to run this mod. Cracked/Pirated versions of the game are **NOT** supported.
 
+
+## WINE / Linux
+
+This version of HorizonMW's source code, has been specifically designed for WINE, running from Linux. Please do not attempt to run anywhere outside of a Linux OS.
+
+For pre-compiled WINE-compliant binaries (to be run inside of Linux only) please see the [releases](https://github.com/MichaelDeets/HorizonMW-Client/releases) for more information.
+
+For a guide on what depedencies are required, that is coming soon...
+
 ## Compile from source
 
 - Clone the Git repo. Do NOT download it as ZIP, that won't work.
