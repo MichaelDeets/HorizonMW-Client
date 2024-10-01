@@ -1,10 +1,8 @@
 # Introduction
 
-This version of HorizonMW's source code, has been specifically designed for WINE, running from Linux. Please do not attempt to run anywhere outside of a Linux OS.
+This copy of HorizonMW's source code, has been altered to run under a WINE environment on Linux. Do NOT attempt to run this binary from Windows, you WILL have problems. While this is for Linux only, some users have reported success with use on MacOS. I will not provide any support outside of Linux.
 
-For pre-compiled WINE-compliant binaries (to be run inside of Linux only) please see the [releases](https://github.com/MichaelDeets/HorizonMW-Client/releases) for more information.
-
-For a guide on what depedencies are required, that is coming soon...
+For pre-compiled WINE-compliant binaries please see [releases](https://github.com/MichaelDeets/HorizonMW-Client/releases) for more information.
 
 ## Installation
 
