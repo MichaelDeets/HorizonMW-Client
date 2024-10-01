@@ -1,19 +1,4 @@
-![license](https://img.shields.io/github/license/auroramod/h1-mod.svg)
-[![open bugs](https://img.shields.io/github/issues/HorizonMW/HorizonMW-Client/bug?label=bugs)](https://github.com/HorizonMW/HorizonMW-Client/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![Build](https://github.com/auroramod/h1-mod/workflows/Build/badge.svg)](https://github.com/auroramod/h1-mod/actions)
-[![Build status](https://ci.appveyor.com/api/projects/status/0sh80kdnsvm53rno?svg=true)](https://ci.appveyor.com/project/auroramod/h1-mod)
-[![Discord](https://img.shields.io/discord/1272500523010097202?color=%237289DA&label=members&logo=discord&logoColor=%23FFFFFF)](https://discord.gg/horizonmw)
-
-# HorizonMW - H2M-Mod
-
-<p align="center">
-  <img src="assets/github/banner.png?raw=true" />
-</p>
-
-NOTE: You must legally own Call of Duty®: Modern Warfare Remastered to run this mod. Cracked/Pirated versions of the game are **NOT** supported.
-
-
-## WINE / Linux
+# Introduction
 
 This version of HorizonMW's source code, has been specifically designed for WINE, running from Linux. Please do not attempt to run anywhere outside of a Linux OS.
 
@@ -21,27 +6,18 @@ For pre-compiled WINE-compliant binaries (to be run inside of Linux only) please
 
 For a guide on what depedencies are required, that is coming soon...
 
-## Compile from source
+## Installation
 
-- Clone the Git repo. Do NOT download it as ZIP, that won't work.
-- Update the submodules and run `premake5 vs2022` or simply use the delivered `generate.bat`.
-- Build via solution file in `build\h1-mod.sln`.
+Download `h2m-mod.exe` from [releases](https://github.com/MichaelDeets/HorizonMW-Client/releases), place this file inside your HorizonMW root directory.
 
-### Premake arguments
+Note: Using HMW Launcher to verify the files will replace `h2m-mod.exe` with the original copy (that doesn't work in Linux). If you use HMW Launcher to verify files, make sure to re-replace the `h2m-mod.exe` file inside the root directory.
 
-| Argument                    | Description                                    |
-|:----------------------------|:-----------------------------------------------|
-| `--copy-to=PATH`            | Optional, copy the EXE to a custom folder after build, define the path here if wanted. |
-| `--dev-build`               | Enable development builds of the client. |
+## Bugs / Issues
 
-## Credits
+Please report any issues you have with running `h2m-mod.exe` through WINE/Linux. If you have problems unrelated to WINE/Linux, instead use the original [HorizonMW GitHub](https://github.com/HorizonMW/HorizonMW-Client).
 
-- [s1x-client](https://github.com/HeartbeatingForCenturies/s1x-client) - codebase and research (predecessor of MWR)
-- [h1-mod](https://github.com/auroramod/h1-mod) - codebase
-- [h2-mod](https://github.com/fedddddd/h2-mod) - research (successor of MWR)
-- [h2m-mod] - ported assets/maps and allot of groundwork
-- [momo5502](https://github.com/momo5502) - Arxan/Steam research, former lead developer of [XLabsProject](https://github.com/XLabsProject)
+## Game not launching
 
-## Disclaimer
+1: Try running `h2m-mod.exe` from Steam (add a non-Steam game), using Proton Experimental or Proton GE.
 
-This software has been created purely for the purposes of academic research. It is not intended to be used to attack other systems. Project maintainers are not responsible or liable for misuse of the software. Use responsibly.
+2: Try adding `-nosteam` as a launch option.
