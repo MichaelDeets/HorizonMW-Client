@@ -1,6 +1,6 @@
 [submodule "deps/GSL"]
 	path = deps/GSL
-	url = https://github.com/Microsoft/GSL.git
+	url = https://github.com/MichaelDeets/GSL
 [submodule "deps/rapidjson"]
 	path = deps/rapidjson
 	url = https://github.com/Tencent/rapidjson.git
