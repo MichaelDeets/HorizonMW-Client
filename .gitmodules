@@ -15,17 +15,17 @@
 	url = https://github.com/fedddddd/discord-rpc.git
 [submodule "deps/asmjit"]
 	path = deps/asmjit
-	url = https://github.com/asmjit/asmjit.git
+	url = https://github.com/asmjit/asmjit
 [submodule "deps/WinToast"]
 	path = deps/WinToast
 	url = https://github.com/mohabouje/WinToast.git
 [submodule "deps/libtomcrypt"]
 	path = deps/libtomcrypt
-	url = https://github.com/libtom/libtomcrypt.git
+	url = https://github.com/libtom/libtomcrypt
 	branch = develop
 [submodule "deps/libtommath"]
 	path = deps/libtommath
-	url = https://github.com/libtom/libtommath.git
+	url = https://github.com/libtom/libtommath
 	branch = develop
 [submodule "deps/protobuf"]
 	path = deps/protobuf
