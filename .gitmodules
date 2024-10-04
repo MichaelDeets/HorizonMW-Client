@@ -54,3 +54,6 @@
 [submodule "deps/sol2"]
 	path = deps/sol2
 	url = https://github.com/ThePhD/sol2
+[submodule "deps/lua"]
+	path = deps/lua
+	url = https://github.com/lua/lua
