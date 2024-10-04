@@ -37,7 +37,7 @@
 	branch = develop
 [submodule "deps/curl"]
 	path = deps/curl
-	url = https://github.com/curl/curl.git
+	url = https://github.com/curl/curl
 [submodule "deps/json"]
 	path = deps/json
 	url = https://github.com/nlohmann/json.git
