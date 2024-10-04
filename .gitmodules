@@ -40,7 +40,7 @@
 	url = https://github.com/curl/curl
 [submodule "deps/json"]
 	path = deps/json
-	url = https://github.com/nlohmann/json.git
+	url = https://github.com/nlohmann/json
 [submodule "deps/gsc-tool"]
 	path = deps/gsc-tool
 	url = https://github.com/xensik/gsc-tool.git
