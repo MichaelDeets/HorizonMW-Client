@@ -9,7 +9,7 @@
 	url = https://github.com/vmt/udis86
 [submodule "deps/minhook"]
 	path = deps/minhook
-	url = https://github.com/TsudaKageyu/minhook.git
+	url = https://github.com/TsudaKageyu/minhook
 [submodule "deps/discord-rpc"]
 	path = deps/discord-rpc
 	url = https://github.com/fedddddd/discord-rpc.git
