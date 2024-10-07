@@ -238,7 +238,7 @@ namespace auth
 						{
 							if (clantag == "HMW" || clantag == "H2M")
 							{
-								CALL(&network::send, *from, "error", "Tag not allowed"), '\n';
+								&network::send, *from, "error", "Tag not allowed", '\n';
 								return;
 							}
 							for (auto row_i = 0; row_i < game::StringTable_GetRowCount(gamertags_pc); ++row_i)
@@ -246,7 +246,7 @@ namespace auth
 								auto tag = game::StringTable_GetColumnValueForRow(gamertags_pc, row_i, 0);
 								if (!strcmp(tag, clantag.c_str()))
 								{
-									CALL(&network::send, *from, "error", "Tag not allowed", '\n');
+									&network::send, *from, "error", "Tag not allowed", '\n';
 									return;
 								}
 							}
@@ -256,7 +256,7 @@ namespace auth
 								auto tag = game::StringTable_GetColumnValueForRow(horizongamertags_pc, row_i, 0);
 								if (!strcmp(tag, clantag.c_str()))
 								{
-									CALL(&network::send, *from, "error", "Tag not allowed", '\n');
+									&network::send, *from, "error", "Tag not allowed", '\n';
 									return;
 								}
 							}
