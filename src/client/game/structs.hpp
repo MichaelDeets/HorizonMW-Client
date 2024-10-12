@@ -5,6 +5,8 @@
 
 #include "database.hpp"
 
+#define PERK_ARRAY_COUNT 4
+
 namespace game
 {
 	typedef float vec_t;
@@ -1395,20 +1397,20 @@ namespace game
 		BUTTON_UNK1 = (1 << 3), // ??
 		BUTTON_RELOAD = (1 << 4),
 		BUTTON_USERELOAD = (1 << 5), // BUTTON_USERELOAD | BUTTON_UNK1 == BUTTON_USE?
-		BUTTON_UNK3 = (1 << 6), // ??
-		BUTTON_UNK4 = (1 << 7), // ??
-		BUTTON_STANCE = (1 << 8),
-		BUTTON_UNK5 = (1 << 9), // on ps->eFlags & EF_DEAD
+		BUTTON_LEANLEFT = (1 << 6),
+		BUTTON_LEANRIGHT = (1 << 7),
+		BUTTON_PRONE = (1 << 8),
+		BUTTON_DUCK = (1 << 9),
 		BUTTON_GOSTAND = (1 << 10), // jump button
 		BUTTON_ADS = (1 << 11),
 		BUTTON_UNK6 = (1 << 12), // ??
-		BUTTON_UNK7 = (1 << 13), // ??
+		BUTTON_BREATH = (1 << 13), // hold breath
 		BUTTON_FRAG = (1 << 14),
 		BUTTON_SMOKE = (1 << 15),
 		BUTTON_UNK8 = (1 << 16), // ucmd->selectedLoc and ucmd->selectedLocAngle related
 		BUTTON_UNK9 = (1 << 17), // ??
 		BUTTON_UNK10 = (1 << 18), // ??
-		BUTTON_UNK11 = (1 << 19), // ??
+		BUTTON_SECONDARY_ATTACK = (1 << 19),
 		BUTTON_UNK12 = (1 << 20), // ucmd->remoteControlAngles and ucmd->remoteControlMove related
 		BUTTON_UNK13 = (1 << 21), // ??
 		BUTTON_UNK14 = (1 << 22), // ??
@@ -1720,7 +1722,10 @@ namespace game
 		unsigned __int8 use_elite_clan_tag;
 		char elite_clan_tag_text[5];
 		int elite_clan_level;
-		char _pad1[20];
+		bool isMLGSpectator;
+		int game_extrainfo;
+		Material* rankIconHandle;
+		uint32_t rankDisplayLevel;
 		bool braggingRights;
 	};
 
@@ -2145,7 +2150,11 @@ namespace game
 		DemoType demoType;
 		CubemapShot cubemapShot;
 		int cubemapSize;
-		char __pad4[28];
+		int hiResShotMode;
+		int renderScreen;
+		int latestSnapshotNum;
+		int latestSnapshotTime;
+		snapshot_s* snap;
 		snapshot_s* nextSnap;
 		char __pad1[582400];
 		int spectatingThirdPerson;
