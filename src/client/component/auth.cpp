@@ -60,7 +60,7 @@ namespace auth
 
 		std::string get_protected_data()
 		{
-			std::string input = "H2MMod-Auth";
+			std::string input = "HMWMod-Auth";
 
 			DATA_BLOB data_in{}, data_out{};
 			data_in.pbData = reinterpret_cast<uint8_t*>(input.data());
@@ -277,35 +277,14 @@ namespace auth
 									game::SV_DirectConnect(from);
 									return;
 								}
-								if (!strcmp(tag, "H2M") && strcmp(clantag.c_str(), "HMW"))
+								if (!strcmp(tag, "H2M"))
 								{
-									game::SV_DirectConnect(from);
-									return;
-								}
-								if (!strcmp(tag, clantag.c_str()))
-								{
-									game::SV_DirectConnect(from);
-									return;
-								}
-							}
-						}
-
-						for (auto row_i = 0; row_i < game::StringTable_GetRowCount(horizongamertags_pc); ++row_i)
-						{
-							auto tag = game::StringTable_GetColumnValueForRow(horizongamertags_pc, row_i, 0);
-							auto id = game::StringTable_GetColumnValueForRow(horizongamertags_pc, row_i, 1);
-
-							if (!strcmp(discord_id.c_str(), id))
-							{
-								if (!strcmp(tag, "HMW"))
-								{
-									game::SV_DirectConnect(from);
-									return;
-								}
-								if (!strcmp(tag, "H2M") && strcmp(clantag.c_str(), "HMW"))
-								{
-									game::SV_DirectConnect(from);
-									return;
+									
+									if (strcmp(clantag.c_str(), "HMW") != 0)
+									{
+										game::SV_DirectConnect(from);
+										return;
+									}
 								}
 								if (!strcmp(tag, clantag.c_str()))
 								{
@@ -322,6 +301,7 @@ namespace auth
 			}
 
 			game::SV_DirectConnect(from);
+
 		}
 
 		void* get_direct_connect_stub()
