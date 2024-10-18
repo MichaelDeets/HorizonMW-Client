@@ -19,8 +19,6 @@
 #include <utils/string.hpp>
 #include <utils/flags.hpp>
 #include "clantag_utils.hpp"
-#include <utils/obfus.hpp>
-
 
 namespace patches
 {
