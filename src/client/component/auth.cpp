@@ -18,7 +18,6 @@
 #include <utils/info_string.hpp>
 #include <utils/cryptography.hpp>
 #include <utils/http.hpp>
-#include <utils/obfus.hpp>
 
 namespace auth
 {
