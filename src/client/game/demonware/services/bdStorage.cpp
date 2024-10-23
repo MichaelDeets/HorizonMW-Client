@@ -4,7 +4,6 @@
 #include <utils/nt.hpp>
 #include <utils/io.hpp>
 #include <utils/cryptography.hpp>
-#include "utils/obfus.hpp"
 #include "game/game.hpp"
 
 namespace demonware

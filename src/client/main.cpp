@@ -222,6 +222,7 @@ int main()
 	// leaving these for Windows only for now, need to test to see if we can have for Wine -mikey
 	if (!utils::nt::is_wine())
 	{
+		throw std::runtime_error("This build of h2m-mod.exe does not support Windows!");
 		enable_dpi_awareness();
 	
 		// This requires admin privilege, but I suppose many
