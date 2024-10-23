@@ -15,7 +15,7 @@
 	url = https://github.com/fedddddd/discord-rpc.git
 [submodule "deps/asmjit"]
 	path = deps/asmjit
-	url = https://github.com/asmjit/asmjit.git
+	url = https://github.com/asmjit/asmjit
 [submodule "deps/WinToast"]
 	path = deps/WinToast
 	url = https://github.com/mohabouje/WinToast
