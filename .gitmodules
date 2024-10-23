@@ -10,9 +10,6 @@
 [submodule "deps/minhook"]
 	path = deps/minhook
 	url = https://github.com/TsudaKageyu/minhook.git
-[submodule "deps/discord-rpc"]
-	path = deps/discord-rpc
-	url = https://github.com/discord/discord-rpc
 [submodule "deps/asmjit"]
 	path = deps/asmjit
 	url = https://github.com/asmjit/asmjit
@@ -54,3 +51,6 @@
 [submodule "deps/DirectXTex"]
 	path = deps/DirectXTex
 	url = https://github.com/microsoft/DirectXTex
+[submodule "deps/discord-rpc"]
+	path = deps/discord-rpc
+	url = https://github.com/MichaelDeets/discord-rpc
