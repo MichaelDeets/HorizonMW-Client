@@ -80,9 +80,9 @@ namespace patches
 		{
 			std::string name = game::Dvar_FindVar("name")->current.string;
 			clean_text(name); 
-			// Remove characters in the range from 0x01 to 0x20
+			// Remove characters in the range from 0x01 to 0x1F
 			name.erase(std::remove_if(name.begin(), name.end(), [](unsigned char c) {
-				return (c >= 0x01 && c <= 0x20);
+				return (c >= 0x01 && c <= 0x1F);
 				}), name.end());
 			// Copy the cleaned name into a static string to avoid memory problems
 			static std::string safe_name;
@@ -115,7 +115,7 @@ namespace patches
 
 			std::string user_name_str{ username, username_len - 1 };
 			user_name_str.erase(std::remove_if(user_name_str.begin(), user_name_str.end(), [](unsigned char c) {
-				return (c >= 0x01 && c <= 0x20);
+				return (c >= 0x01 && c <= 0x1F);
 				}), user_name_str.end());
 
 			return user_name_str.empty() ? "Unknown Soldier" : user_name_str;
@@ -646,8 +646,8 @@ namespace patches
 			// change names of window name + stat files for hmw
 			utils::hook::copy_string(0x926210_b, "HorizonMW");	// window name
 			utils::hook::copy_string(0x929168_b, "HorizonMW");	// mulitbyte string (window too?)
-			utils::hook::copy_string(0x91F464_b, "h2mdta");		// mpdata
-			utils::hook::copy_string(0x91F458_b, "h2mcdta");	// commondata
+			utils::hook::copy_string(0x91F464_b, "hmwdta");		// mpdata
+			utils::hook::copy_string(0x91F458_b, "hmwcdta");	// commondata
 
 			// overrides of lighting dvars to make it script-controlled instead (and replicated to server -> client)
 			dvars::override::register_bool("r_drawsun", 0, game::DVAR_FLAG_NONE | game::DVAR_FLAG_REPLICATED);
