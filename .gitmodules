@@ -22,7 +22,7 @@
 	branch = develop
 [submodule "deps/libtommath"]
 	path = deps/libtommath
-	url = https://github.com/libtom/libtommath.git
+	url = https://github.com/libtom/libtommath
 	branch = develop
 [submodule "deps/protobuf"]
 	path = deps/protobuf
