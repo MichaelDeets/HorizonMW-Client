@@ -24,10 +24,6 @@
 	path = deps/libtommath
 	url = https://github.com/libtom/libtommath
 	branch = develop
-[submodule "deps/protobuf"]
-	path = deps/protobuf
-	url = https://github.com/protocolbuffers/protobuf.git
-	branch = 3.20.x
 [submodule "deps/zlib"]
 	path = deps/zlib
 	url = https://github.com/madler/zlib
@@ -56,3 +52,6 @@
 [submodule "deps/sol2"]
 	path = deps/sol2
 	url = https://github.com/ThePhD/sol2
+[submodule "deps/mongoose"]
+	path = deps/mongoose
+	url = https://github.com/cesanta/mongoose
