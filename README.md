@@ -4,6 +4,7 @@ This copy of HorizonMW's source code, has been altered to run under a WINE envir
 
 For pre-compiled WINE-compliant binaries please see [releases](https://github.com/MichaelDeets/HorizonMW-Client/releases) for more information.
 
+
 ## Installation
 
 Download `h2m-mod.exe` from [releases](https://github.com/MichaelDeets/HorizonMW-Client/releases), place this file inside your HorizonMW root directory.
@@ -19,3 +20,13 @@ Please report any issues you have with running `h2m-mod.exe` through WINE/Linux.
 1: Try running `h2m-mod.exe` from Steam (add a non-Steam game), using Proton Experimental or Proton GE.
 
 2: Try adding `-nosteam` as a launch option.
+
+# Notes for users updating from v1.3.0 to v1.3.1
+
+## Stats have reset!?
+
+For an immediate solution (as of 2024/10/24) for v1.3.1 users, try using the [v1.3.1-staging release](https://github.com/MichaelDeets/HorizonMW-Client/releases/tag/v1.3.1-staging). You can find out more information using either release page for v1.3.1 or v1.3.1-staging.
+
+## Game hangs on the first loading screen
+
+Try re-adding the shortcut to Steam.
