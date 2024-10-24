@@ -10,6 +10,7 @@ end
 function wintoast.includes()
 	includedirs {
 		path.join(wintoast.source, "src"),
+		path.join(wintoast.source, "include"),
 	}
 end
 
