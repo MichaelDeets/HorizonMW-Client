@@ -18,7 +18,7 @@
 	url = https://github.com/mohabouje/WinToast
 [submodule "deps/libtomcrypt"]
 	path = deps/libtomcrypt
-	url = https://github.com/libtom/libtomcrypt.git
+	url = https://github.com/libtom/libtomcrypt
 	branch = develop
 [submodule "deps/libtommath"]
 	path = deps/libtommath
