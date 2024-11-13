@@ -35,6 +35,15 @@ store = "steam"
 ```
 Change the `exe` value, to the location where you have HorizonMW installed. This configuration assumes you are using the default location where Modern Warfare Remastered (2017) is installed by Steam. You can also adjust the `proton` value, if you want to use something like Proton-GE, currently this uses the default Proton version installed when using UMU.
 
+### Launch using UMU
+
+Save this file somewhere, with the extension of `.toml`, such as `hmw.toml`. 
+After saving the configuration file, launch using:
+
+`umu-run --config hmw.toml`
+
+change `hmw.toml` to your configuration file name, and include location if required.
+
 ## Game not launching
 
 1: Try running `hmw-mod.exe` from Steam (add a non-Steam game), using Proton Experimental or Proton GE.
