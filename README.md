@@ -15,17 +15,31 @@ Note: Using HMW Launcher to verify the files will replace `hmw-mod.exe` with the
 
 Please report any issues you have with running `hmw-mod.exe` through WINE/Linux. If you have problems unrelated to WINE/Linux, instead use the original [HorizonMW GitHub](https://github.com/HorizonMW/HorizonMW-Client).
 
+## UMU-Launcher
+
+It is now possible to use UMU-Launcher to play HorizonMW. 
+
+The most important thing being the WINE prefix location. The configuration below will use the default `~/.wine` location, you might want to change this. There is one requirement for whichever prefix location you use; within `drive_c/Program Files (x86)/Steam` you must include the files `steamclient64.dll` and `GameOverlayRenderer64.dll`, otherwise the game will crash before the Makarov screen. 
+
+`steamclient64.dll` and `GameOverlayRenderer64.dll` can be found within the root of the Steam directory `~/.local/share/Steam/`.
+
+My recommendation, is to create a basic .toml configuration file; you can use the following as an outline:
+```
+[umu]
+prefix = "~/.wine"
+proton = "~/.local/share/Steam/compatibilitytools.d/UMU-Latest"
+game_id = "0"
+exe = "~/.local/share/Steam/steamapps/common/Call of Duty Modern Warfare Remastered/hmw-mod.exe"
+launch_args = ["-nosteam"]
+store = "steam"
+```
+Change the `exe` value, to the location where you have HorizonMW installed. This configuration assumes you are using the default location where Modern Warfare Remastered (2017) is installed by Steam. You can also adjust the `proton` value, if you want to use something like Proton-GE, currently this uses the default Proton version installed when using UMU.
+
 ## Game not launching
 
 1: Try running `hmw-mod.exe` from Steam (add a non-Steam game), using Proton Experimental or Proton GE.
 
 2: Try adding `-nosteam` as a launch option.
-
-# Notes for users updating from v1.3.0 to v1.3.1
-
-## Stats have reset!?
-
-For an immediate solution (as of 2024/10/24) for v1.3.1 users, try using the [v1.3.1-staging release](https://github.com/MichaelDeets/HorizonMW-Client/releases/tag/v1.3.1-staging). You can find out more information using either release page for v1.3.1 or v1.3.1-staging.
 
 ## Game hangs on the first loading screen
 
