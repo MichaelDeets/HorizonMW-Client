@@ -1,3 +1,9 @@
+# UPDATE 1.4
+
+This repo is now deprecated. Please DO NOT USE.
+
+Download directly from HorizonMW, and everything should just work!
+
 # Introduction
 
 This copy of HorizonMW's source code, has been altered to run under a WINE environment on Linux. Do NOT attempt to run this binary from Windows, you WILL have problems. While this is for Linux only, some users have reported success with use on MacOS. I will not provide any support outside of Linux.
